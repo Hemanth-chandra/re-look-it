@@ -1,0 +1,6 @@
+metric,value
+sentiment_macro_f1_all,0.6848511822814003
+sentiment_macro_f1_long,0.6920315318915226
+sentiment_neutral_f1,0.2592716338122285
+urgency_macro_f1,0.9021428113104805
+aspects_mean_f1,0.7727170109689421

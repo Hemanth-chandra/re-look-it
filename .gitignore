@@ -1,0 +1,7 @@
+# model weights are attached to the GitHub Release, not committed
+model/model.pt
+model/*.part
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+.DS_Store

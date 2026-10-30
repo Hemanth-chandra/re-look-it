@@ -1,0 +1,61 @@
+{
+  "base_model": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+  "max_length": 64,
+  "dropout": 0.3,
+  "sentiment_labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "urgency_labels": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "aspects": [
+    "delivery_order",
+    "refund_payment",
+    "product_quality",
+    "missing_wrong_item",
+    "app_tech",
+    "customer_support",
+    "pricing_offers",
+    "safety"
+  ],
+  "aspect_thresholds": {
+    "delivery_order": 0.75,
+    "refund_payment": 0.8,
+    "product_quality": 0.85,
+    "missing_wrong_item": 0.9,
+    "app_tech": 0.85,
+    "customer_support": 0.9,
+    "pricing_offers": 0.8,
+    "safety": 0.7
+  },
+  "urgency_rule": "final = max(model, rules); score = min(1, max(p_high + 0.5*p_medium, rule_score) + 0.05*log(1+likes))",
+  "aspect_rule": "model (tuned thresholds) OR keyword flag",
+  "why_words": "gradient x input on predicted sentiment + urgency logits, top 3 words",
+  "sentiment_temperature": 0.61,
+  "neutral_bias": -0.9,
+  "confidence_bands": {
+    "high_min": 0.893,
+    "medium_min": 0.821,
+    "method": "Validation confidence deciles. High: from the lowest decile where it and all higher deciles have accuracy >= 0.90. Low: below the top of the highest decile with accuracy < 0.70. Medium: between.",
+    "val_accuracy": {
+      "High": 0.973,
+      "Medium": 0.866,
+      "Low": 0.563
+    }
+  },
+  "aspect_source": {
+    "delivery_order": "model OR keyword",
+    "refund_payment": "model OR keyword",
+    "product_quality": "model OR keyword",
+    "missing_wrong_item": "model OR keyword",
+    "app_tech": "model OR keyword",
+    "customer_support": "model OR keyword",
+    "pricing_offers": "model OR keyword",
+    "safety": "model OR keyword"
+  },
+  "aspect_rule_note": "Validation cannot compare sources (val labels are keyword flags); rule fixed as a design choice."
+}

@@ -1,0 +1,7 @@
+group,attention_top5,gradient_top5,review
+negative + High,"👎👎👎, refund, waiting, product, order","unavailable, spot, product, refund, accepting",i order product I was showing available after accepting the product is unavailable spot refund is no
+negative + High,"paisa, deta, return, baar, hota","zero, kiya, paisa, gaya, baar",zero deta 0 Hota toh 2 baar Saman magwaya donohi baar kharab aaya na Saman le gaya na paisa return k
+positive,"delivery..gr8, fastest, service, one","delivery..gr8, fastest, service, one",one of the fastest delivery..gr8 service
+positive,"service, quality, 💯, products, excellent","products, quality, service, 💯, excellent","excellent 💯 service, good quality products"
+neutral,"offer, delivery, attractive, slow, any","any, delivery, offer, slow, attractive",slow delivery with no any attractive offer.
+neutral,"charges...this, delivery, more, much, too","delivery, charges...this, more, too, much",more delivery charges...this is too much

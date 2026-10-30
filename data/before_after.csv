@@ -1,0 +1,47 @@
+section,metric,version,value,note
+sentiment,val macro-F1 (star labels),before (T only),0.68,
+sentiment,val macro-F1 (star labels),after (T + neutral bias),0.69,
+sentiment,human macro-F1 (weighted),star labels,0.67,neutral has only 17 human rows
+sentiment,human accuracy (weighted),star labels,0.905,
+sentiment,human negative recall (weighted),star labels,0.892,
+sentiment,human-negative predicted neutral (count),star labels,11.0,
+sentiment,human macro-F1 (weighted),model v1,0.718,neutral has only 17 human rows
+sentiment,human accuracy (weighted),model v1,0.875,
+sentiment,human negative recall (weighted),model v1,0.808,
+sentiment,human-negative predicted neutral (count),model v1,36.0,
+sentiment,human macro-F1 (weighted),model final,0.719,neutral has only 17 human rows
+sentiment,human accuracy (weighted),model final,0.911,
+sentiment,human negative recall (weighted),model final,0.875,
+sentiment,human-negative predicted neutral (count),model final,18.0,
+confidence,val ECE,before (raw),0.156,
+confidence,val ECE,after (T + bias),0.039,
+confidence,band High val accuracy,final,0.973,
+confidence,band High share of all reviews,final,0.647,
+confidence,band Medium val accuracy,final,0.866,
+confidence,band Medium share of all reviews,final,0.233,
+confidence,band Low val accuracy,final,0.563,
+confidence,band Low share of all reviews,final,0.12,
+urgency,human macro-F1 (weighted),model,0.712,
+urgency,human High F1 (weighted),model,0.615,
+urgency,human macro-F1 (weighted),rules,0.708,
+urgency,human High F1 (weighted),rules,0.677,
+urgency,human macro-F1 (weighted),"max(model, rules)",0.721,
+urgency,human High F1 (weighted),"max(model, rules)",0.649,
+aspects,human mean F1 (weighted),keywords,0.689,
+aspects,human mean F1 (weighted),model,0.645,
+aspects,human mean F1 (weighted),old OR (deployed),0.706,chosen after seeing human labels (optimistic)
+aspects,human mean F1 (weighted),validation-chosen,0.689,= keywords: val labels are keyword flags
+urgency,disagreements total (count),human v2 (71 High),41.0,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,disagreements: model right (count),human v2 (71 High),20.0,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,disagreements: rules right (count),human v2 (71 High),13.0,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,disagreements: neither right (count),human v2 (71 High),8.0,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,disagreements: model right (weighted %),human v2 (71 High),54.6,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,disagreements: rules right (weighted %),human v2 (71 High),29.1,small n (41) – indicative; source: urgency_model vs rule_urgency on labels_final_v2.csv
+urgency,human-High caught by both (count),human v1 (73 High),48.0,"earlier label file (labels_final.csv), Cell 10"
+urgency,human-High caught by model only (count),human v1 (73 High),3.0,"earlier label file (labels_final.csv), Cell 10"
+urgency,human-High caught by rules only (count),human v1 (73 High),4.0,"earlier label file (labels_final.csv), Cell 10"
+urgency,human-High missed by both (count),human v1 (73 High),18.0,"earlier label file (labels_final.csv), Cell 10"
+urgency,human-High caught by both (count),human v2 (71 High),48.0,17 of 71 (24%) urgent reviews missed by both – limitation; source: labels_final_v2.csv
+urgency,human-High caught by model only (count),human v2 (71 High),2.0,17 of 71 (24%) urgent reviews missed by both – limitation; source: labels_final_v2.csv
+urgency,human-High caught by rules only (count),human v2 (71 High),4.0,17 of 71 (24%) urgent reviews missed by both – limitation; source: labels_final_v2.csv
+urgency,human-High missed by both (count),human v2 (71 High),17.0,17 of 71 (24%) urgent reviews missed by both – limitation; source: labels_final_v2.csv
