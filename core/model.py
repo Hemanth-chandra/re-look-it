@@ -20,7 +20,7 @@ from core.keyword_aspects import keyword_aspects
 from core.text_rules import clean_text, clean_top, script_type, urgency_rules
 
 # >>> EDIT THIS LINE after creating the GitHub Release (see README) <<<
-MODEL_URL = "https://github.com/YOUR-GITHUB-USERNAME/relookit-app/releases/download/v1.0/model.pt"
+MODEL_URL = "https://github.com/hemanth-chandra/re-look-it/releases/download/v1.0/model.pt"
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_DIR = ROOT / "model"
